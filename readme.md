@@ -4,6 +4,10 @@
 
 Version number: 72cf4fe47f85c39779267d0ecee07655a354e623
 
+## Assumptions
+
+- Any sales tax applies to the whole shopping cart, and there aren't tax-exempt items in a shopping cart.
+
 # Installation instructions
 
 - Install a [Python 3.10 interpreter](https://www.python.org/downloads/).
@@ -41,9 +45,11 @@ TOTAL               96      3    97%
 
 # Quality assurance
 
-I used `pre-commit` to run the linting and QA checks. If you want to run this manually, you can
-run `pre-commit run --all-files`. This command is useful if you want to run all the QA functions at once. <br /> But if
-you want to run it automatically before commits then
+I used `pre-commit` to run the linting and QA checks. QA checks and the test suite runs on each commit in Github
+Pipelines. If you want to run this manually, you can run `pre-commit run --all-files`. This command is useful if you
+want to run all the QA functions at once.
+
+But if you want to run it automatically before commits then
 run `pre-commit install` [or see the pre-commit documentation for other integrations](https://pre-commit.com/#3-install-the-git-hook-scripts)
 after installing the requisite dependencies.
 
@@ -56,10 +62,6 @@ a command line or a web application, so please just use your tests to drive the 
 Please Note: All totals should be rounded up to 2 decimal places, i.e. 0.565 should result in 0.57 but 0.5649 should
 result in 0.56. This is basically the same rounding you learned at school, but you can follow this link if you really
 want more details.
-
-## Assumptions
-
-- Any sales tax applies to the whole shopping cart, and there aren't tax-exempt items in a shopping cart.
 
 ## Step 1
 
