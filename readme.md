@@ -11,17 +11,19 @@ Version number: 72cf4fe47f85c39779267d0ecee07655a354e623
 # Installation instructions
 
 - Install a [Python 3.10 interpreter](https://www.python.org/downloads/).
-- To run the code, run `python test_step_1.py`,  `python test_step_2.py` or  `python test_step_3.py`
+- To run the code, run `python test_step_1.py`, `python test_step_2.py` or `python test_step_3.py`
 - (Optional) To run the tests in a single run:
-    - Create a virtual environment
-    - Install dependencies in `requirements.txt`
+    - Create a [virtual environment](https://docs.python.org/3/library/venv.html): `C:\Python310\python -m venv c:\path\to\myenv`
+    - Activate the virtual environment: `<venv>\Scripts\activate.bat` (Windows) or `source <venv>/bin/activate` (
+      Mac/Linux)
+    - Install dependencies in `requirements.txt`: `pip install -r requirements.txt`
     - Run `pytest --cov`. At the time of writing this, here is the result from running the test suite with code
       coverage.
 
 ```
 ====================================================== test session starts ======================================================
 platform win32 -- Python 3.10.4, pytest-7.1.2, pluggy-1.0.0
-rootdir: C:\Users\antho\PycharmProjects\shopping-cart
+rootdir: C:\Users\____\PycharmProjects\shopping-cart
 plugins: cov-3.0.0
 collected 3 items
 
