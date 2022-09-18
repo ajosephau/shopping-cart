@@ -57,11 +57,6 @@ repos:
     hooks:
       - id: bandit
 
-  - repo: https://github.com/Lucas-C/pre-commit-hooks-safety
-    rev: v1.2.1
-    hooks:
-      - id: python-safety-dependencies-check
-
 # sets up .pre-commit-ci.yaml to ensure pre-commit dependencies stay up to date
 ci:
     autoupdate_schedule: weekly
