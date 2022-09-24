@@ -8,7 +8,6 @@ This module has all shopping cart models and a support function for generating c
 
 """
 
-# -*- coding: utf-8 -*-
 from typing import Dict
 
 
