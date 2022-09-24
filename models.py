@@ -9,7 +9,7 @@ This module has all shopping cart models and a support function for generating c
 """
 
 # -*- coding: utf-8 -*-
-from typing import TypedDict
+from typing import Dict
 
 
 def currency_rounding(val: float) -> float:
@@ -38,19 +38,6 @@ class Product:
         self.unit_price_excl_tax = currency_rounding(unit_price_excl_tax)
 
 
-class ShoppingCartProducts(TypedDict):
-    """An abstraction of products in the shopping cart. A dictionary mapping each product to respective quantities.
-
-    Attributes:
-        product (Product): Product object.
-        quantity (int): Number of product's in shopping cart
-
-    """
-
-    product: Product
-    quantity: int
-
-
 class ShoppingCart:
     """An abstraction of our shopping cart.
 
@@ -60,7 +47,7 @@ class ShoppingCart:
     """
 
     def __init__(self, sales_tax_rate: float = 0.0):
-        self.products: ShoppingCartProducts = {}
+        self.products: Dict[Product, int] = {}
         self.sales_tax_rate = sales_tax_rate
 
     @property
@@ -89,7 +76,8 @@ class ShoppingCart:
         return currency_rounding(self.total_pre_tax * self.sales_tax_rate)
 
     def add_item(self, product: Product, quantity: int) -> None:
-        """Adds an item to the shopping cart. If one adds the same product to the shopping cart the quantity will be updated.
+        """Adds an item to the shopping cart. If one adds the same
+        product to the shopping cart the quantity will be updated.
 
         Args:
             product: The product to be added.

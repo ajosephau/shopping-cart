@@ -2,7 +2,7 @@
 
 ## Particulars
 
-Version number: 72cf4fe47f85c39779267d0ecee07655a354e623
+Version number: `72cf4fe47f85c39779267d0ecee07655a354e623`
 
 ## Assumptions
 
@@ -47,7 +47,7 @@ TOTAL               96      3    97%
 
 # Quality assurance
 
-I used `pre-commit` to run the linting and QA checks. QA checks and the test suite runs on each commit in Github
+I used `pre-commit` to run the linting and QA checks. QA checks and the test suite runs on each commit in GitHub
 Pipelines. If you want to run this manually, you can run `pre-commit run --all-files`. This command is useful if you
 want to run all the QA functions at once.
 
