@@ -124,3 +124,16 @@ Then:
 - And the shopping cart should contain 2 Axe Deos each with a unit price of 99.99
 - And the total sales tax amount for the shopping cart should equal 35.00
 - And the shopping cart’s total price should equal 314.96
+
+
+# Step 4
+
+Buy now get one free
+
+- Adding Dove soap 39.99
+- Offer of buy two get one free (dove only)
+- And axe deo 89.99 (no discounts)
+- Add 3 dove soaps, shopping cart price
+- total cart: 89.98
+- total discount 39.99
+- tax amount 10
