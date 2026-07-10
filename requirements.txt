@@ -1,4 +1,4 @@
-pip==26.1
+pip==26.1.2
 setuptools==78.1.1
 pytest==9.0.3  # https://github.com/pytest-dev/pytest
 pytest-cov==3.0.0  # https://pypi.org/project/pytest-cov/
